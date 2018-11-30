@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @Html.Partial("_Header")
+    <table style="width:100%;padding:0px;margin:0px;">
+        <tr>
+            <td style="width:1%;vertical-align:top;">@Html.Partial("_Sidebar")</td>
+            <td style="width:99%;vertical-align:top;">
+                <div class="titleBar">@Html.Raw(ViewBag.Breadcrumb)</div>
+                <div class="main-content">
+                    @RenderBody()
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div id="modCampLoc" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <table style="width:100%;">
+                    <tr>
+                        <td style="width:50%;">
+                            <div data-camploc="mergeviral" class="selCampLoc bigBox1 text-center">
+                                <i class="fa fa-laptop bigIcon1"></i>
+                                <h2>On Merge Viral</h2>
+                                <small>
+                                    Placerat sit amet, ultricies vitae lacus.<br />
+                                    Aenean hendrerit portitorfelis
+                                </small>
+                            </div>
+                        </td>
+                        <td style="width:50%;">
+                            <div data-camploc="ownsite" class="selCampLoc bigBox1 text-center">
+                                <i class="fa fa-laptop bigIcon1"></i>
+                                <h2>On Your Own Site</h2>
+                                <small>
+                                    Placerat sit amet, ultricies vitae lacus.<br />
+                                    Aenean hendrerit portitorfelis
+                                </small>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="modCampType" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content text-center">
+                <table style="width:100%;">
+                    <tr>
+                        <td style="width:50%;">
+                            <div data-camptype="referral" class="selCampType bigBox2 text-center">
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td><i class="fa fa-laptop bigIcon1"></i></td>
+                                        <td>
+                                            <h4>Referral Campaign</h4>
+                                            <small>
+                                                Placerat sit amet, ultricies vitae lacus.<br />
+                                                Aenean hendrerit portitorfelis
+                                            </small>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                        <td style="width:50%;">
+                            <div data-camptype="contest" class="selCampType bigBox2 text-center">
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td><i class="fa fa-laptop bigIcon1"></i></td>
+                                        <td>
+                                            <h4>Contest Campaign</h4>
+                                            <small>
+                                                Placerat sit amet, ultricies vitae lacus.<br />
+                                                Aenean hendrerit portitorfelis
+                                            </small>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <p>&nbsp;</p>
+                <h3>Name your new campaign</h3>
+                <h4>Enter a name to help you remember this campaign.</h4>
+                <div><input type="text" class="txtBoxRound1" style="width:80%;" /></div>
+                <button class="btn btn-lg btn-primary btnCreateCamp">CREATE</button>
+
+            </div>
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/scripts/global.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

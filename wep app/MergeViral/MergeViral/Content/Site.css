@@ -1,0 +1,256 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding-top: 55px;
+    padding-bottom: 20px;
+    font-family: Arial;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bolder;
+}
+
+small {
+    font-size: 16px;
+    color: #808080;
+}
+
+.main-content {
+    background-color: #f9f8ff;
+    min-height: 1000px;
+    padding: 30px;
+}
+
+.navbar-default {
+    background-image: linear-gradient(to right, #1dbffd, #6C68FA);
+    height: 56px;
+}
+
+.navbar-brand, .navbar-brand:hover {
+    background-color: #fff;
+}
+
+.img_circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.img_circle2 {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.pencil_circle {
+    border-radius: 50%;
+    border: solid 2px #eee;
+    padding: 10px;
+    position: relative;
+    top: -30px;
+    right: -120px;
+    background-color: #fff;
+}
+
+.glyphicon-globe, .glyphicon-bell {
+    font-size: 30px;
+    color: #fff;
+}
+
+.caret {
+    color: #fff;
+}
+
+.sidebar {
+    margin: 0px;
+    padding: 0px;
+    border-top: solid 2px #eee;
+    border-right: solid 2px #eee;
+    background-color: #fff;
+    width: 201px;
+    min-height: 1000px;
+}
+
+.sidebarMenuItemSel {
+    cursor: default;
+    background-color: #6C68FA;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 20px;
+    margin: 0px;
+}
+
+.sidebarMenuItem {
+    cursor: default;
+    color: #b2b2b2;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 20px;
+    margin: 0px;
+}
+
+    .sidebarMenuItem:hover {
+        background-color: #6C68FA;
+        color: #fff;
+    }
+
+.titleBar {
+    background-color: #fff;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#tblCampaign {
+    background-color: #fff;
+    font-size: 16px;
+}
+
+    #tblCampaign tr th, #tblCampaign tr td {
+        padding: 20px;
+    }
+
+
+    #tblCampaign tbody tr:first-child th {
+        background-color: #625fdf;
+        color: #fff;
+    }
+
+.actionIcon {
+    padding: 10px;
+    font-size: 18px;
+    color: #808080;
+}
+
+.leadText {
+    font-size: 28px;
+    color: #625fdf;
+}
+
+.bigBox1 {
+    border: solid 2px #eee;
+    padding: 50px;
+    height: 500px;
+}
+
+.bigBox2 {
+    border: solid 2px #eee;
+    padding: 50px;
+    height: 200px;
+}
+
+.bigIcon1 {
+    font-size: 100px;
+}
+
+.btn-primary {
+    color: #fff;
+    border-radius: 25%;
+    background-color: #625fdf;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.btn-secondary {
+    color: #fff;
+    border-radius: 25%;
+    background-color: red;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.txtBoxRound1 {
+    border-radius: 30%;
+    padding: 20px;
+}
+
+.bigTextBox1 {
+    border: solid 1px #808080;
+    text-align: center;
+    width: 200px;
+    font-size: 70px;
+    border-radius: 25%;
+}
+
+.txtBoxTrans {
+    color: #fff;
+    border: none;
+    background: transparent;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.sidebarBigIcon {
+    font-size: 46px;
+}
+
+.sidebarBox {
+    text-align: center;
+    padding: 30px;
+    border: solid 2px #eee;
+}
+
+    .sidebarBox h3 a {
+        font-size: 18px;
+        color: #000;
+    }
+
+    .jumbotron {
+        color: #000;
+        background-color: #fff;
+        padding: 30px 50px 30px 50px;
+    }
+
+.dottedBoxRight {
+    float: right;
+    text-align: center;
+    display: inline-block;
+    border: dotted 1px lightblue;
+    padding: 30px;
+    width: 300px;
+}
+
+.imgRoundEdges {
+    border-radius: 10%;
+}
+
+.grayBox {
+    background-color: #eee;
+    padding: 30px 20px 30px 20px;
+    width: auto;
+    border-radius: 15%;
+}
+
+.txtBoxRound2 {
+    background-color: #fff;
+    border: solid 1px #808080;
+    border-radius: 15%;
+    padding: 10px;
+    width: 100%;
+}
+
+.label1 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #808080;
+}
+
+.dashBox {
+    border-radius: 5%;
+    padding: 30px;
+    color: #fff;
+    margin: 0px;
+    box-shadow: 5px 5px 10px grey;
+}

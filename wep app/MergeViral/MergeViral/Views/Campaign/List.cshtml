@@ -1,0 +1,33 @@
+﻿@using MergeViral.Models
+@model RepoResult<CampaignMdl>
+@{
+    ViewBag.Title = "My Campaigns";
+    ViewBag.Breadcrumb = "<a href='/'>Dashboard</a> / My Campaigns";
+}
+
+<button class="btn btn-lg btn-primary pull-right" data-toggle="modal" data-target="#modCampLoc">Create Campaign <span class="fa fa-plus"></span></button>
+<table id="tblCampaign" class="table table-hover">
+    <tr>
+        <th>Date Created</th>
+        <th>Title</th>
+        <th class="text-center">Total Leads</th>
+        <th class="text-center">Total Views</th>
+        <th class="text-center">Total Leads Today</th>
+        <th class="text-center">Action</th>
+    </tr>
+    @foreach (CampaignMdl c in ((List<CampaignMdl>)Model.ReturnList))
+    {
+        <tr>
+            <td>@string.Format("{0:MMM dd, yyyy}", c.Created)</td>
+            <td>@c.Name</td>
+            <th class="text-center leadText"><span class="fas fa-envelope actionIcon"></span> 0</th>
+            <th class="text-center leadText"><span class="fas fa-users actionIcon"></span> 0</th>
+            <th class="text-center leadText"><span class="fas fa-envelope actionIcon"></span> 0</th>
+            <td class="text-center">
+                <span class="glyphicon glyphicon-pencil actionIcon"></span>
+                <span class="fas fa-trash actionIcon"></span>
+                <span class="fas fa-ellipsis-h actionIcon"></span>
+            </td>
+        </tr>
+    }
+</table>

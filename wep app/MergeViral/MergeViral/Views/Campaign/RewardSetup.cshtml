@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Rewards Setup";
+    ViewBag.Breadcrumb = "<a href='/'>Dashboard</a> / <a href='/campaign/list/'>My Campaigns</a> / Reward Setup";
+}
+
+<div class="jumbotron">
+    <h2>Reward setup</h2>
+
+    <hr />
+
+    <h4>Do you want to offer rewards?</h4>
+
+    <small>
+        Suis egestas est sit amet tortor tempor, at sodales arci posuere.<br />
+        <br />
+        Maecenas ac orci quis tortor viverra gravida in luctus arcu. Etiam partitor est massa, sed molestie justo lobortis quis. Suspenddisse dapibus ornare ultireces.
+    </small>
+
+    <div class="dottedBoxRight">
+        <button class="btn btn-lg btn-primary text-center">ADD A REWARD</button>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+</div>
+
+<div class="jumbotron">
+    <h2>Step 2. Reward Points setup</h2>
+
+    <hr />
+
+    <table style="width:100%;">
+        <tr>
+            <td style="width:50%;">
+                <h3>A. Direct Sign Up</h3>
+                <small>
+                    When your campaign participants generate a new Lead<br />
+                    with the help of THEIR referred participants.
+                </small>
+            </td>
+            <td style="width:50%;">
+                <input type="text" class="bigTextBox1" value="0" />
+            </td>
+        </tr>
+    </table>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <table style="width:100%;">
+        <tr>
+            <td style="width:50%;">
+                <h3>B. Referred Sign Up</h3>
+                <small>
+                    When your campaign participants generate a new Lead<br />
+                    with the help of THEIR referred participants.
+                </small>
+            </td>
+            <td style="width:50%;">
+                <input type="text" class="bigTextBox1" value="0" />
+            </td>
+        </tr>
+    </table>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <table style="width:100%;">
+        <tr>
+            <td style="width:50%;">
+                <h3>C. Referred Lead</h3>
+                <small>
+                    When your campaign participants generate a new Lead<br />
+                    directly through THEIR OWN referral link.
+                </small>
+            </td>
+            <td style="width:50%;">
+                <input type="text" class="bigTextBox1" value="0" />
+            </td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <h4>Points for social Shares</h4>
+    <small>
+        Decide how many points you want to give your advocates for sharing on social networks.<br />
+        (IMPORTANT: Points are awarded for clicks whether or not they actually share on social)
+    </small>
+    <p>&nbsp;</p>
+    <table border="1" class="table" >
+        <tr>
+            <td class="text-center" style="background-color:purple;padding:20px;color:#fff;">
+                <div>Facebook</div>
+                <input type="text" class="txtBoxTrans" value="0" />
+            </td>
+            <td class="text-center" style="background-color:blue;padding:20px;color:#fff;">
+                <div>Twitter</div>
+                <input type="text" class="txtBoxTrans" value="0" />
+            </td>
+            <td class="text-center" style="background-color:red;padding:20px;color:#fff;">
+                <div>Google Plus</div>
+                <input type="text" class="txtBoxTrans" value="0" />
+            </td>
+            <td class="text-center" style="background-color:purple;padding:20px;color:#fff;">
+                <div>LinkedIn</div>
+                <input type="text" class="txtBoxTrans" value="0" />
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<a href="/campaign/landpg/" class="btn btn-lg btn-secondary pull-right">SAVE & CONTINUE</a>

@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MergeViralDBModelStoreContainer" CdmEntityContainer="MergeViralDBEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="MergeViralDBModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Campaigns">
+      <EntityTypeMapping TypeName="MergeViralDBModel.Campaign">
+        <MappingFragment StoreEntitySet="Campaign">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CampaignLocationId" ColumnName="CampaignLocationId" />
+          <ScalarProperty Name="CampaignTypeId" ColumnName="CampaignTypeId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CampaignLocations">
+      <EntityTypeMapping TypeName="MergeViralDBModel.CampaignLocation">
+        <MappingFragment StoreEntitySet="CampaignLocation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CampaignTypes">
+      <EntityTypeMapping TypeName="MergeViralDBModel.CampaignType">
+        <MappingFragment StoreEntitySet="CampaignType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailNotifications">
+      <EntityTypeMapping TypeName="MergeViralDBModel.EmailNotification">
+        <MappingFragment StoreEntitySet="EmailNotification">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
+          <ScalarProperty Name="SendAfterRegistration" ColumnName="SendAfterRegistration" />
+          <ScalarProperty Name="SendWhenSignsUp" ColumnName="SendWhenSignsUp" />
+          <ScalarProperty Name="SendWhenRewardUnlocked" ColumnName="SendWhenRewardUnlocked" />
+          <ScalarProperty Name="FromName" ColumnName="FromName" />
+          <ScalarProperty Name="FromEmail" ColumnName="FromEmail" />
+          <ScalarProperty Name="ServerHost" ColumnName="ServerHost" />
+          <ScalarProperty Name="ServerPort" ColumnName="ServerPort" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EncryptionType" ColumnName="EncryptionType" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LandingPages">
+      <EntityTypeMapping TypeName="MergeViralDBModel.LandingPage">
+        <MappingFragment StoreEntitySet="LandingPage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
+          <ScalarProperty Name="TemplateId" ColumnName="TemplateId" />
+          <ScalarProperty Name="ReferralLink" ColumnName="ReferralLink" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Leads">
+      <EntityTypeMapping TypeName="MergeViralDBModel.Lead">
+        <MappingFragment StoreEntitySet="Lead">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
+          <ScalarProperty Name="ReferralLink" ColumnName="ReferralLink" />
+          <ScalarProperty Name="RefererIP" ColumnName="RefererIP" />
+          <ScalarProperty Name="RefererBrowser" ColumnName="RefererBrowser" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rewards">
+      <EntityTypeMapping TypeName="MergeViralDBModel.Reward">
+        <MappingFragment StoreEntitySet="Reward">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
+          <ScalarProperty Name="RewardTypeId" ColumnName="RewardTypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PointsMinimum" ColumnName="PointsMinimum" />
+          <ScalarProperty Name="PointsDirectSignUp" ColumnName="PointsDirectSignUp" />
+          <ScalarProperty Name="PointsReferredSignUp" ColumnName="PointsReferredSignUp" />
+          <ScalarProperty Name="PointsReferredLead" ColumnName="PointsReferredLead" />
+          <ScalarProperty Name="PointsFacebook" ColumnName="PointsFacebook" />
+          <ScalarProperty Name="PointsTwitter" ColumnName="PointsTwitter" />
+          <ScalarProperty Name="PointsGoogle" ColumnName="PointsGoogle" />
+          <ScalarProperty Name="PointsLinkedIn" ColumnName="PointsLinkedIn" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RewardTypes">
+      <EntityTypeMapping TypeName="MergeViralDBModel.RewardType">
+        <MappingFragment StoreEntitySet="RewardType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SocialPosts">
+      <EntityTypeMapping TypeName="MergeViralDBModel.SocialPost">
+        <MappingFragment StoreEntitySet="SocialPost">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
+          <ScalarProperty Name="SocialPostTypeId" ColumnName="SocialPostTypeId" />
+          <ScalarProperty Name="HandleName" ColumnName="HandleName" />
+          <ScalarProperty Name="StandardTweet" ColumnName="StandardTweet" />
+          <ScalarProperty Name="EmailSubject" ColumnName="EmailSubject" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="ReferralLink" ColumnName="ReferralLink" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SocialPostTypes">
+      <EntityTypeMapping TypeName="MergeViralDBModel.SocialPostType">
+        <MappingFragment StoreEntitySet="SocialPostType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Templates">
+      <EntityTypeMapping TypeName="MergeViralDBModel.Template">
+        <MappingFragment StoreEntitySet="Template">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BackgroundImg" ColumnName="BackgroundImg" />
+          <ScalarProperty Name="BackgroundColor" ColumnName="BackgroundColor" />
+          <ScalarProperty Name="TitleText" ColumnName="TitleText" />
+          <ScalarProperty Name="TitleFontFamily" ColumnName="TitleFontFamily" />
+          <ScalarProperty Name="TitleFontSize" ColumnName="TitleFontSize" />
+          <ScalarProperty Name="TitleBackgroundColor" ColumnName="TitleBackgroundColor" />
+          <ScalarProperty Name="BtnText" ColumnName="BtnText" />
+          <ScalarProperty Name="BtnFontFamily" ColumnName="BtnFontFamily" />
+          <ScalarProperty Name="BtnFontSize" ColumnName="BtnFontSize" />
+          <ScalarProperty Name="BtnBackgroundColor" ColumnName="BtnBackgroundColor" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Views">
+      <EntityTypeMapping TypeName="MergeViralDBModel.View">
+        <MappingFragment StoreEntitySet="View">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
+          <ScalarProperty Name="ReferralLink" ColumnName="ReferralLink" />
+          <ScalarProperty Name="RefererIP" ColumnName="RefererIP" />
+          <ScalarProperty Name="RefererBrowser" ColumnName="RefererBrowser" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

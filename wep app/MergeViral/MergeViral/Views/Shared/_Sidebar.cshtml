@@ -1,0 +1,83 @@
+﻿<div class="sidebar">
+    @{ string url = Request.Url.AbsoluteUri.ToLower(); }
+
+    @if (url.IndexOf("rewardsetup") > -1 ||
+        url.IndexOf("landpg") > -1 ||
+        url.IndexOf("sharepg") > -1 ||
+        url.IndexOf("social") > -1 ||
+        url.IndexOf("emailsetup") > -1 ||
+        url.IndexOf("launch") > -1)
+    {
+        <div class="sidebarBox" style="background-image:linear-gradient(to right, #1dbffd, #6C68FA);padding:5px;">
+            <h3 class="text-center center-block"><a href="/campaign/list" style="color:#fff;"><span class="fa fa-arrow-left"></span> BACK</a></h3>
+        </div>
+        <div class="sidebarBox">
+            <span class="fa fa-check pull-right"></span>
+            <span class="fa fa-gift sidebarBigIcon"></span>
+            <h3 class="text-center center-block"><a href="/campaign/rewardsetup">Rewards</a></h3>
+        </div>
+        <div class="sidebarBox">
+            @if (url.IndexOf("landpg") > -1 ||
+                url.IndexOf("sharepg") > -1 ||
+                url.IndexOf("social") > -1 ||
+                url.IndexOf("emailsetup") > -1 ||
+                url.IndexOf("launch") > -1)
+            {
+                <span class="fa fa-check pull-right"></span>
+            }
+            <span class="fa fa-file sidebarBigIcon"></span>
+            <h3 class="text-center center-block"><a href="/campaign/landpg">Landing Page</a></h3>
+        </div>
+        <div class="sidebarBox">
+            @if (url.IndexOf("sharepg") > -1 ||
+                url.IndexOf("social") > -1 ||
+                url.IndexOf("emailsetup") > -1 ||
+                url.IndexOf("launch") > -1)
+            {
+                <span class="fa fa-check pull-right"></span>
+            }
+            <span class="fa fa-share sidebarBigIcon"></span>
+            <h3 class="text-center center-block"><a href="/campaign/sharepg">Share Page</a></h3>
+        </div>
+        <div class="sidebarBox">
+            @if (url.IndexOf("social") > -1 ||
+                url.IndexOf("emailsetup") > -1 ||
+                url.IndexOf("launch") > -1)
+            {
+                <span class="fa fa-check pull-right"></span>
+            }
+            <span class="fa fa-share-square sidebarBigIcon"></span>
+            <h3 class="text-center center-block"><a href="/campaign/social">Social Appearance</a></h3>
+        </div>
+        <div class="sidebarBox">
+            @if (url.IndexOf("emailsetup") > -1 ||
+                url.IndexOf("launch") > -1)
+            {
+                <span class="fa fa-check pull-right"></span>
+            }
+            <span class="fa fa-envelope sidebarBigIcon"></span>
+            <h3 class="text-center center-block"><a href="/campaign/emailsetup">Email Setup</a></h3>
+        </div>
+        <div class="sidebarBox">
+            @if (url.IndexOf("launch") > -1)
+            {
+                <span class="fa fa-check pull-right"></span>
+            }
+            <span class="fa fa-rocket sidebarBigIcon"></span>
+            <h3 class="text-center center-block"><a href="/campaign/launch">Launch</a></h3>
+        </div>
+    }
+    else
+    {
+        <p>&nbsp;</p>
+        <img src="http://www.app.mergebox.io/viral/uploads/user/1522301228_HS_BlueEyes_02.jpg" class="img_circle2 center-block" />
+        <span class="glyphicon glyphicon-pencil pencil_circle"></span>
+        <h3 class="text-center" style="padding:0px;margin:0px;font-weight:700;">Ravi Girnar</h3>
+        <p>&nbsp;</p>
+        <div id="mnu1" class="sidebarMenuItem" data-href="/"><span class="fas fa-home"></span>&nbsp;&nbsp;Dashboard</div>
+        <div id="mnu2" class="sidebarMenuItem" data-href="/campaign/list"><span class="fas fa-boxes"></span>&nbsp;&nbsp;My Campaigns</div>
+        <div id="mnu3" class="sidebarMenuItem" data-toggle="modal" data-target="#modCampLoc"><span class="fas fa-magic"></span>&nbsp;&nbsp;Create Campaign</div>
+        <div id="mnu4" class="sidebarMenuItem" data-href="/history/"><span class="fas fa-file-alt"></span>&nbsp;&nbsp;History</div>
+        <div id="mnu5" class="sidebarMenuItem" data-href="/settings/"><span class="fas fa-cogs"></span>&nbsp;&nbsp;Settings</div>
+    }
+</div>

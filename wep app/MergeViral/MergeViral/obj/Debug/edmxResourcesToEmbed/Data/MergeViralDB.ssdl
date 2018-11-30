@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MergeViralDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Campaign">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="CampaignLocationId" Type="int" Nullable="false" />
+    <Property Name="CampaignTypeId" Type="int" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CampaignLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CampaignType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmailNotification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CampaignId" Type="int" Nullable="false" />
+    <Property Name="SendAfterRegistration" Type="bit" />
+    <Property Name="SendWhenSignsUp" Type="bit" />
+    <Property Name="SendWhenRewardUnlocked" Type="bit" />
+    <Property Name="FromName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FromEmail" Type="nvarchar" MaxLength="150" />
+    <Property Name="ServerHost" Type="nvarchar" MaxLength="50" />
+    <Property Name="ServerPort" Type="int" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" />
+    <Property Name="EncryptionType" Type="nvarchar" MaxLength="10" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LandingPage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CampaignId" Type="int" Nullable="false" />
+    <Property Name="TemplateId" Type="int" Nullable="false" />
+    <Property Name="ReferralLink" Type="nvarchar" MaxLength="250" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Lead">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CampaignId" Type="int" Nullable="false" />
+    <Property Name="ReferralLink" Type="nvarchar" MaxLength="250" />
+    <Property Name="RefererIP" Type="nvarchar" MaxLength="250" />
+    <Property Name="RefererBrowser" Type="nvarchar" MaxLength="250" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reward">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CampaignId" Type="int" Nullable="false" />
+    <Property Name="RewardTypeId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PointsMinimum" Type="int" Nullable="false" />
+    <Property Name="PointsDirectSignUp" Type="int" />
+    <Property Name="PointsReferredSignUp" Type="int" />
+    <Property Name="PointsReferredLead" Type="int" />
+    <Property Name="PointsFacebook" Type="int" />
+    <Property Name="PointsTwitter" Type="int" />
+    <Property Name="PointsGoogle" Type="int" />
+    <Property Name="PointsLinkedIn" Type="int" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RewardType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SocialPost">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CampaignId" Type="int" Nullable="false" />
+    <Property Name="SocialPostTypeId" Type="int" Nullable="false" />
+    <Property Name="HandleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="StandardTweet" Type="nvarchar" MaxLength="150" />
+    <Property Name="EmailSubject" Type="nvarchar" MaxLength="150" />
+    <Property Name="Title" Type="nvarchar" MaxLength="150" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Img" Type="nvarchar" MaxLength="150" />
+    <Property Name="ReferralLink" Type="nvarchar" MaxLength="250" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SocialPostType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Template">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BackgroundImg" Type="nvarchar" MaxLength="50" />
+    <Property Name="BackgroundColor" Type="nvarchar" MaxLength="20" />
+    <Property Name="TitleText" Type="nvarchar" MaxLength="250" />
+    <Property Name="TitleFontFamily" Type="nvarchar" MaxLength="20" />
+    <Property Name="TitleFontSize" Type="int" />
+    <Property Name="TitleBackgroundColor" Type="nvarchar" MaxLength="20" />
+    <Property Name="BtnText" Type="nvarchar" MaxLength="20" />
+    <Property Name="BtnFontFamily" Type="nvarchar" MaxLength="20" />
+    <Property Name="BtnFontSize" Type="int" />
+    <Property Name="BtnBackgroundColor" Type="nvarchar" MaxLength="20" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CampaignId" Type="int" Nullable="false" />
+    <Property Name="ReferralLink" Type="nvarchar" MaxLength="250" />
+    <Property Name="RefererIP" Type="nvarchar" MaxLength="250" />
+    <Property Name="RefererBrowser" Type="nvarchar" MaxLength="250" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Campaign__Accoun__310335E5">
+    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Campaign">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Campaign__Campai__31F75A1E">
+    <End Role="CampaignLocation" Type="Self.CampaignLocation" Multiplicity="1" />
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CampaignLocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Campaign">
+        <PropertyRef Name="CampaignLocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Campaign__Campai__32EB7E57">
+    <End Role="CampaignType" Type="Self.CampaignType" Multiplicity="1" />
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CampaignType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Campaign">
+        <PropertyRef Name="CampaignTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EmailNoti__Campa__53584DE9">
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="1" />
+    <End Role="EmailNotification" Type="Self.EmailNotification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaign">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmailNotification">
+        <PropertyRef Name="CampaignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LandingPa__Campa__47E69B3D">
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="1" />
+    <End Role="LandingPage" Type="Self.LandingPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaign">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LandingPage">
+        <PropertyRef Name="CampaignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LandingPa__Templ__48DABF76">
+    <End Role="Template" Type="Self.Template" Multiplicity="1" />
+    <End Role="LandingPage" Type="Self.LandingPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Template">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LandingPage">
+        <PropertyRef Name="TemplateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lead__CampaignId__36BC0F3B">
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="1" />
+    <End Role="Lead" Type="Self.Lead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaign">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lead">
+        <PropertyRef Name="CampaignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reward__Campaign__40457975">
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="1" />
+    <End Role="Reward" Type="Self.Reward" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaign">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reward">
+        <PropertyRef Name="CampaignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reward__RewardTy__41399DAE">
+    <End Role="RewardType" Type="Self.RewardType" Multiplicity="1" />
+    <End Role="Reward" Type="Self.Reward" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RewardType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reward">
+        <PropertyRef Name="RewardTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SocialPos__Campa__4E9398CC">
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="1" />
+    <End Role="SocialPost" Type="Self.SocialPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaign">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SocialPost">
+        <PropertyRef Name="CampaignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SocialPos__Socia__4F87BD05">
+    <End Role="SocialPostType" Type="Self.SocialPostType" Multiplicity="1" />
+    <End Role="SocialPost" Type="Self.SocialPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SocialPostType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SocialPost">
+        <PropertyRef Name="SocialPostTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__View__CampaignId__3A8CA01F">
+    <End Role="Campaign" Type="Self.Campaign" Multiplicity="1" />
+    <End Role="View" Type="Self.View" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaign">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="View">
+        <PropertyRef Name="CampaignId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MergeViralDBModelStoreContainer">
+    <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Campaign" EntityType="Self.Campaign" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CampaignLocation" EntityType="Self.CampaignLocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CampaignType" EntityType="Self.CampaignType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmailNotification" EntityType="Self.EmailNotification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LandingPage" EntityType="Self.LandingPage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lead" EntityType="Self.Lead" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reward" EntityType="Self.Reward" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RewardType" EntityType="Self.RewardType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SocialPost" EntityType="Self.SocialPost" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SocialPostType" EntityType="Self.SocialPostType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Template" EntityType="Self.Template" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="View" EntityType="Self.View" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Campaign__Accoun__310335E5" Association="Self.FK__Campaign__Accoun__310335E5">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Campaign" EntitySet="Campaign" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Campaign__Campai__31F75A1E" Association="Self.FK__Campaign__Campai__31F75A1E">
+      <End Role="CampaignLocation" EntitySet="CampaignLocation" />
+      <End Role="Campaign" EntitySet="Campaign" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Campaign__Campai__32EB7E57" Association="Self.FK__Campaign__Campai__32EB7E57">
+      <End Role="CampaignType" EntitySet="CampaignType" />
+      <End Role="Campaign" EntitySet="Campaign" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EmailNoti__Campa__53584DE9" Association="Self.FK__EmailNoti__Campa__53584DE9">
+      <End Role="Campaign" EntitySet="Campaign" />
+      <End Role="EmailNotification" EntitySet="EmailNotification" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LandingPa__Campa__47E69B3D" Association="Self.FK__LandingPa__Campa__47E69B3D">
+      <End Role="Campaign" EntitySet="Campaign" />
+      <End Role="LandingPage" EntitySet="LandingPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LandingPa__Templ__48DABF76" Association="Self.FK__LandingPa__Templ__48DABF76">
+      <End Role="Template" EntitySet="Template" />
+      <End Role="LandingPage" EntitySet="LandingPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lead__CampaignId__36BC0F3B" Association="Self.FK__Lead__CampaignId__36BC0F3B">
+      <End Role="Campaign" EntitySet="Campaign" />
+      <End Role="Lead" EntitySet="Lead" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reward__Campaign__40457975" Association="Self.FK__Reward__Campaign__40457975">
+      <End Role="Campaign" EntitySet="Campaign" />
+      <End Role="Reward" EntitySet="Reward" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reward__RewardTy__41399DAE" Association="Self.FK__Reward__RewardTy__41399DAE">
+      <End Role="RewardType" EntitySet="RewardType" />
+      <End Role="Reward" EntitySet="Reward" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SocialPos__Campa__4E9398CC" Association="Self.FK__SocialPos__Campa__4E9398CC">
+      <End Role="Campaign" EntitySet="Campaign" />
+      <End Role="SocialPost" EntitySet="SocialPost" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SocialPos__Socia__4F87BD05" Association="Self.FK__SocialPos__Socia__4F87BD05">
+      <End Role="SocialPostType" EntitySet="SocialPostType" />
+      <End Role="SocialPost" EntitySet="SocialPost" />
+    </AssociationSet>
+    <AssociationSet Name="FK__View__CampaignId__3A8CA01F" Association="Self.FK__View__CampaignId__3A8CA01F">
+      <End Role="Campaign" EntitySet="Campaign" />
+      <End Role="View" EntitySet="View" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

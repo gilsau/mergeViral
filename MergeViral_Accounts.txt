@@ -1,0 +1,43 @@
+Here is link to log in details:
+https://1drv.ms/x/s!AlhArsl3GbCpkiK2J6TrfHqRDu76
+
+
+Here is the software layout and design:
+https://marvelapp.com/4cb3ijh/screen/38211505
+
+MergeViral
+
+Cpanel URL
+http://wwwss50.a2hosting.com/cpanel
+
+Username
+sociomin
+Password
+Pentium@#32
+
+Login URL: 
+http://www.app.mergebox.io/viral/site/login
+Username: ravi.chauchan@girnarsoft.com
+Password: 123456
+
+Admin URL:
+http://www.app.mergebox.io/viral/admin/site/login
+Username: admin
+Password: 123456
+
+MergeViral Server Requirements
+file:///home/chronos/u-ec11ff787974b950e7373541179cdb5c615040be/Downloads/phpinfo().mhtml
+http://irefer.girnarlive.com/site/test
+
+DB Name:
+sociomin_mergeviraldb
+ser name: sociomin_mergevi
+User Password: mergeviral@123
+
+
+MergeClip
+http://www.app.mergebox.io/clip/Loginusers
+Username: lucky@gmail.com
+Password: 123456
+
+https://www.app.mergebox.io/social/

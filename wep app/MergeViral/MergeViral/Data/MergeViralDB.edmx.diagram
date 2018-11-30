@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="10996042f0584b2dbbc84a1b79c0a0aa" Name="Diagram1">
+        <EntityTypeShape EntityType="MergeViralDBModel.Account" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MergeViralDBModel.Campaign" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="MergeViralDBModel.CampaignLocation" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MergeViralDBModel.CampaignType" Width="1.5" PointX="0.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MergeViralDBModel.EmailNotification" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MergeViralDBModel.LandingPage" Width="1.5" PointX="8.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="MergeViralDBModel.Lead" Width="1.5" PointX="5.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MergeViralDBModel.Reward" Width="1.5" PointX="8.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MergeViralDBModel.RewardType" Width="1.5" PointX="6" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MergeViralDBModel.SocialPost" Width="1.5" PointX="8.25" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MergeViralDBModel.SocialPostType" Width="1.5" PointX="6" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MergeViralDBModel.Template" Width="1.5" PointX="6" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MergeViralDBModel.View" Width="1.5" PointX="5.25" PointY="33" IsExpanded="true" />
+        <AssociationConnector Association="MergeViralDBModel.FK__Campaign__Accoun__310335E5" ManuallyRouted="false" />
+        <AssociationConnector Association="MergeViralDBModel.FK__Campaign__Campai__31F75A1E" ManuallyRouted="false" />
+        <AssociationConnector Association="MergeViralDBModel.FK__Campaign__Campai__32EB7E57" ManuallyRouted="false" />
+        <AssociationConnector Association="MergeViralDBModel.FK__EmailNoti__Campa__53584DE9" ManuallyRouted="false" />
+        <AssociationConnector Association="MergeViralDBModel.FK__LandingPa__Campa__47E69B3D" ManuallyRouted="false" />
+        <AssociationConnector Association="MergeViralDBModel.FK__Lead__CampaignId__36BC0F3B" ManuallyRouted="false" />
+        <AssociationConnector Association="MergeViralDBModel.FK__Reward__Campaign__40457975" ManuallyRouted="false" />
+        <AssociationConnector Association="MergeViralDBModel.FK__SocialPos__Campa__4E9398CC" ManuallyRouted="false" />
+        <AssociationConnector Association="MergeViralDBModel.FK__View__CampaignId__3A8CA01F" ManuallyRouted="false" />
+        <AssociationConnector Association="MergeViralDBModel.FK__LandingPa__Templ__48DABF76" ManuallyRouted="false" />
+        <AssociationConnector Association="MergeViralDBModel.FK__Reward__RewardTy__41399DAE" ManuallyRouted="false" />
+        <AssociationConnector Association="MergeViralDBModel.FK__SocialPos__Socia__4F87BD05" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

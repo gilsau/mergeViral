@@ -1,0 +1,122 @@
+﻿
+@{
+    ViewBag.Title = "Social Appearance";
+    ViewBag.Breadcrumb = "<a href='/'>Dashboard</a> / <a href='/campaign/list/'>My Campaigns</a> / Social Appearance";
+}
+
+<div class="jumbotron">
+    <h2>Social Media Appearance</h2>
+
+    <hr />
+
+    <h4>Social sharing channels appear on the share page and in the emails send to your signed up members Before you share on social channels, please make sure it contains your sharing text.</h4>
+
+    <p>&nbsp;</p>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#home" role="tab" data-toggle="tab">
+                FACEBOOK PREVIEW
+            </a>
+        </li>
+        <li>
+            <a href="#profile" role="tab" data-toggle="tab">
+                TWITTER PREVIEW
+            </a>
+        </li>
+        <li>
+            <a href="#messages" role="tab" data-toggle="tab">
+                EMAIL PREVIEW
+            </a>
+        </li>
+        
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="home">
+            <table style="width:100%;">
+                <tr>
+                    <td style="width:50%;padding:20px;vertical-align:top;">
+                        <h3>Facebook</h3>
+                        <small>This appearance will be used by Facebook and all other social networks.</small>
+
+                        <p>&nbsp;</p>
+                        <div class="label1">Post Title</div>
+                        <input type="text" class="txtBoxRound2" placeholder="enter title here" />
+
+                        <p>&nbsp;</p>
+                        <div class="label1">Post Description</div>
+                        <textarea class="txtBoxRound2" rows="5" placeholder="enter description here"></textarea>
+
+                        <p>&nbsp;</p>
+                        <div class="label1">Post Image</div>
+                        <div style="height:300px;width:100%;border:solid 1px #808080;border-radius:15%;display:flex;align-items:center;text-align:center;"><span class="fa fa-camera center-block" style="font-size:70px;color:#eee;"></span></div>
+                        <small class="pull-right" style="margin:5px;">Minimum 300x157 px. Maximum 4096x4096 px. Less than 5MB in size</small>
+                    </td>
+                    <td style="width:50%;padding:20px;background-color:#eee;vertical-align:top;">
+                        <h3>Facebook Post Preview</h3>
+                        <small>Add an image to engage your audience.</small>
+                        <p>&nbsp;</p>
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="tab-pane fade" id="profile">
+            <table style="width:100%;">
+                <tr>
+                    <td style="width:50%;padding:20px;vertical-align:top;">
+                        <h3>Twitter</h3>
+                        <small>This appearance will be used by Twitter.</small>
+
+                        <p>&nbsp;</p>
+                        <div class="label1">Twitter Handle Name</div>
+                        <input type="text" class="txtBoxRound2" placeholder="enter handle here" />
+
+                        <p>&nbsp;</p>
+                        <div class="label1">Standard Tweet</div>
+                        <textarea class="txtBoxRound2" rows="5" placeholder="enter tweet here"></textarea>
+
+                        <p>&nbsp;</p>
+                        <div class="label1">Tweet Image</div>
+                        <div style="height:300px;width:100%;border:solid 1px #808080;border-radius:15%;display:flex;align-items:center;text-align:center;"><span class="fa fa-camera center-block" style="font-size:70px;color:#eee;"></span></div>
+                        <small class="pull-right" style="margin:5px;">Minimum 300x157 px. Maximum 4096x4096 px. Less than 5MB in size</small>
+                    </td>
+                    <td style="width:50%;padding:20px;background-color:#eee;vertical-align:top;">
+                        <h3>Twitter Post Preview</h3>
+                        <small>Add an image to engage your audience.</small>
+                        <p>&nbsp;</p>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="tab-pane fade" id="messages">
+            <table style="width:100%;">
+                <tr>
+                    <td style="width:50%;padding:20px;vertical-align:top;">
+                        <h3>Email</h3>
+                        <small>This appearance will be used in your email.</small>
+
+                        <p>&nbsp;</p>
+                        <div class="label1">Email Subject</div>
+                        <input type="text" class="txtBoxRound2" placeholder="enter subject here" />
+
+                        <p>&nbsp;</p>
+                        <div class="label1">Email Body</div>
+                        <textarea class="txtBoxRound2" rows="5" placeholder="enter message here"></textarea>
+                    </td>
+                    <td style="width:50%;padding:20px;background-color:#eee;vertical-align:top;">
+                        <h3>Email Preview</h3>
+                        <small>Add an image to engage your audience.</small>
+                        <p>&nbsp;</p>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+</div>
